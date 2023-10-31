@@ -36,22 +36,23 @@ class PostService {
 
     }
 
-    // async getPostsWithSearchQuery(searchQuery) {
-    //     const res = await movieApi.get(`api/posts?query=${searchQuery}`)
-    //     logger.log('GET POSTS WITH SEARCH', res.data)
+    async getPostsWithSearchQuery(searchQuery) {
+        const res = await api.get(`api/posts?query=${searchQuery}`)
+        logger.log('GET POSTS WITH SEARCH', res.data)
+        const newPosts = res.data.posts.map(pojo => new Post(pojo))
 
-    //     AppState.searchQuery = searchQuery
-    //     const newPosts = res.data.results.map(pojo => new Post(pojo))
-    //     AppState.posts = newPosts
-    //     AppState.currentPage = res.data.page
-    //     AppState.totalPages = res.data.totalPages
+        AppState.searchQuery = searchQuery
+        AppState.posts = newPosts
+        AppState.currentPage = res.data.page
+        AppState.totalPages = res.data.totalPages
+    }
 
-    // async likePost(postId, liker) {
-    //     const res = await api.put(`api/posts/${postId}`, liker)
-    //     logger.log(res.data)
-    //     const post = AppState.posts.find(post => post.id == postId)
+    async likePost(postId) {
+        const res = await api.post(`api/posts/${postId}/like`)
+        logger.log(res.data)
+        // const post = AppState.posts.find(post => post.id == postId)
 
-    // }
+    }
 }
 
 export const postService = new PostService()

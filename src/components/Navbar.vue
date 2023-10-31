@@ -9,6 +9,10 @@
       aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <router-link :to="{ name: 'Search' }">
+      <i class="mdi mdi-magnify fs-1"></i>
+    </router-link>
+
     <div class="collapse navbar-collapse justify-content-end" id="navbarText">
       <!-- <ul class="navbar-nav me-auto">
         <li>

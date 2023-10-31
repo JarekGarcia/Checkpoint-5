@@ -32,6 +32,11 @@ const routes = [
     name: 'ProfilePage',
     component: loadPage('ProfilePage'),
   },
+  {
+    path: '/search',
+    name: 'Search',
+    component: loadPage('SearchPage'),
+  },
 ]
 
 export const router = createRouter({

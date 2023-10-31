@@ -10,12 +10,21 @@
         <label for="name" class="form-label">Name</label>
         <input type="text" v-model="editable.name" class="form-control" id="name" aria-describedby="name" />
         <div id="emailHelp" class="form-text">
-          We'll never share your name with anyone else.
         </div>
       </div>
       <div class="mb-3">
         <label for="picture" class="form-label">Picture</label>
         <input v-model="editable.picture" type="url" class="form-control" id="picture" />
+      </div>
+      <div class="mb-3">
+        <label for="class" class="form-label">Class</label>
+        <input v-model="editable.class" type="text" class="form-control" id="class" />
+      </div>
+      <div class="mb-3">
+        <label for="graduated" class="form-label">Graduated</label>
+        <div>
+          <input v-model="editable.graduated" type="checkbox" class="form-check-input" id="graduated" />
+        </div>
       </div>
       <div class="mb-3">
         <label for="coverImg" class="form-label">Cover Image</label>

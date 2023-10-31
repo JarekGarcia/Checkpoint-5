@@ -20,6 +20,17 @@ class ProfileService {
         AppState.currentPage = res.data.page
         AppState.totalPages = res.data.totalPages
     }
+
+    // async getProfilesWithSearchQuery(searchQuery) {
+    //     const res = await api.get(`api/profiles?query=${searchQuery}`)
+    //     logger.log('GET POSTS WITH SEARCH', res.data)
+
+    //     AppState.searchQuery = searchQuery
+    //     const newProfile = res.data.results.map(pojo => new profile(pojo))
+    //     AppState.profile = newProfile
+    //     AppState.currentPage = res.data.page
+    //     AppState.totalPages = res.data.totalPages
+    // }
 }
 
 export const profileService = new ProfileService()
