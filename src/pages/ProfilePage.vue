@@ -129,6 +129,7 @@ export default {
     height: 25vh;
     width: 100%;
     object-fit: cover;
+
 }
 
 .profile-img {

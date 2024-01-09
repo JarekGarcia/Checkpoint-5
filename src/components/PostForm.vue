@@ -1,10 +1,10 @@
 <template>
     <form @submit.prevent="createPost()" class="mx-5 p-3">
         <div class="form-group">
-            <label class="fw-bold" for="body">What's on your ghetto mind?</label>
+            <label class="fw-bold" for="body">What's on your mind?</label>
             <textarea v-model="editable.body" type="body" class="form-control mb-3" id="body" name="body"
                 aria-describedby="body" placeholder="type something..."></textarea>
-            <label class="fw-bold" for="imgUrl">Ghetto picture</label>
+            <label class="fw-bold" for="imgUrl">Picture?</label>
             <input v-model="editable.imgUrl" type="url" class="form-control" id="imgUrl" name="imgUrl"
                 aria-describedby="imgUrl" placeholder="image URL">
             <div class="d-flex justify-content-end mt-2">
